@@ -1,17 +1,18 @@
 // _hero.scss
 .hero {
-  background-image: url('https://resources.stuff.co.nz/content/dam/images/1/l/v/r/1/0/image.related.StuffLandscapeSixteenByNine.1420x800.1no2fi.png/1514507679211.jpg');
+  background-image: url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmorningchores.com%2Fwp-content%2Fuploads%2F2018%2F11%2FM1_EXT-1.jpg');
   height: 75vh;
   width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  top: 0;
 }
 
 .hero-text {
-    color: white;
+    color: #191D29;
     position: absolute;
-    bottom: 90px;
-    left: 60px;
+    bottom: 250px;
+    left: 90px;
 }

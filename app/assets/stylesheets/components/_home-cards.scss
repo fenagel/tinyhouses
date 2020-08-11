@@ -1,5 +1,6 @@
 // _home-cards.scss
 .home-card {
+  width: 30em;
   margin-top: 40px;
   margin-bottom: 40px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -10,9 +11,15 @@
   height: 350px;
   background-size: cover;
   }
-
 }
 
 .home-card-text {
-  padding: 20px;
+  // padding: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.home-card-container {
+  width: 88%;
+  margin: 0 auto;
 }
