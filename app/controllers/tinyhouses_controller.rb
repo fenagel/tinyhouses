@@ -12,4 +12,5 @@ class TinyhousesController < ApplicationController
   def find_tinyhouse
     @tinyhouse = Tinyhouse.find(params[:id])
   end
+  
 end
