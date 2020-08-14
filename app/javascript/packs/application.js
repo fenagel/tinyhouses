@@ -28,6 +28,9 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
+// call your functions here so that they are called in every relevant page of the app.
+// && work with AJAX
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
