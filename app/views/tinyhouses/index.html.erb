@@ -1,0 +1,13 @@
+<!-- tinyhouses/index.html.erb -->
+<div class="index-flex">
+  <div class="index-cards">
+    <ul>
+      <% @tinyhouses.each do |tinyhouse| %>
+        <li><%= tinyhouse.title %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="map">
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiaGFydmV5c3dpY2siLCJhIjoiY2thNm0zYzBqMDE3MTJxbXpteHpvc3MxMCJ9.28MPqPIljf6xkoFptooQZQ'>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+// _tinyhousesindex.scss
+.map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.index-flex {
+  display: flex;
+}
+
+.index-cards {
+  display: grid;
+  flex-grow: 1;
+}
