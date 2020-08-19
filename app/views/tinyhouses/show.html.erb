@@ -1,11 +1,12 @@
-<h1><%= @tinyhouse.title %></h1>
-<p><%= @tinyhouse.description %></p>
-<div class="photo-grid">
-  <% @tinyhouse.photos.each do |photo| %>
-    <div class="photo-#{photo.id}">
-      <%= cl_image_tag(photo.key,
-          width: 400, height: 300, crop: :fill) %>
+  <div class="container">
+    <h1><%= @tinyhouse.title %></h1>
+    <p><%= @tinyhouse.description %></p>
+    <div class="photo-grid">
+      <% @tinyhouse.photos.each do |photo| %>
+        <div class="photo-#{photo.id}">
+          <%= cl_image_tag(photo.key, height: '250', width: '250', crop: :fill) %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
 
