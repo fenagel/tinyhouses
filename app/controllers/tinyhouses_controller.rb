@@ -1,7 +1,8 @@
 class TinyhousesController < ApplicationController
   before_action :find_tinyhouse, only: [:show]
 
-  def show; end
+  def show
+  end
 
   def index
     @tinyhouses = Tinyhouse.all
@@ -12,5 +13,5 @@ class TinyhousesController < ApplicationController
   def find_tinyhouse
     @tinyhouse = Tinyhouse.find(params[:id])
   end
-  
+
 end
