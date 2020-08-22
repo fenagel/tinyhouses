@@ -1,7 +1,8 @@
 // _footer.scss
 
-footer {
-  overflow: hidden; // TAKE THIS OFF and fix the footer, it currently breaks the layout
+.page-footer {
+  width: 100vw;
+  // overflow: hidden; // TAKE THIS OFF and fix the footer, it currently breaks the layout
   border-top: 1px #6B2312 solid;
   height: 120px;
 }
@@ -15,7 +16,7 @@ footer {
 .footer-right {
   display: flex;
   justify-content: space-between;
-  margin-right: 40px;
+  margin-right: 3.5em;
 
   a {
     color: #6B2312;
@@ -24,12 +25,12 @@ footer {
 
 .footer-left {
   display: flex;
-  margin-left: 40px;
+  margin-left: 3.5em;
 
   a {
     color: #6B2312;
     margin-left: 10px;
-    margin-right: 10px;
+    // margin-right: 10px;
   }
 }
 
@@ -37,3 +38,31 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width:480px)  {
+  .page-footer {
+    height: 90px;
+
+    .footer-right {
+      margin-right: 2em;
+    }
+
+    .footer-left {
+      margin-left: 2em;
+    }
+
+    a {
+      font-size: 10px;
+    }
+
+    i {
+      font-size: 10px;
+    }
+  }
+}
+
+// @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+// @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+// @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+// @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+// @media (min-width:1281px) { /* hi-res laptops and desktops */ }
