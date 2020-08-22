@@ -1,6 +1,7 @@
 // _footer.scss
 
 footer {
+  overflow: hidden; // TAKE THIS OFF and fix the footer, it currently breaks the layout
   border-top: 1px #6B2312 solid;
   height: 120px;
 }
