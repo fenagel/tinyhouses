@@ -1,7 +1,13 @@
 // _home-cards.scss
+
+// TO DO: make either:
+// 1. (Preferably!) make the cards scroll on the x axis
+// or
+// 2..col-sm-12:last-child => display: none
+
 .home-card {
   // width: 30%;
-  height: 350px;
+  height: 300px;
   margin-top: 40px;
   margin-bottom: 40px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -19,10 +25,20 @@
   // padding: 20px;
   margin-left: 20px;
   margin-top: 10px;
-  background-color: #FFFFFF;
+  // background-color: #FFFFFF;
 }
 
 .home-card-container {
   width: 88%;
   margin: 0 auto;
 }
+
+// @media (max-width:480px)  { // iPhone X
+
+// }
+
+// @media (min-width:812px)  { //iPhone X Landscape
+//   .col-sm-12:last-child {
+//   display: none;
+//   }
+// }

@@ -4,10 +4,10 @@
   width: 100vw;
   // overflow: hidden; // TAKE THIS OFF and fix the footer, it currently breaks the layout
   border-top: 1px $brand solid;
-  height: 120px;
+  height: 100px;
 
   a, i {
-    font-size: 10px;
+    font-size: 0.9rem;
   }
 }
 
