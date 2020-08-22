@@ -1,0 +1,59 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-areas: "photo-1 photo-1 photo-2 photo-3" "photo-1 photo-1 photo-4 photo-5";
+  justify-content: center;
+}
+
+.photo-1 {
+  grid-area: photo-1;
+
+}
+
+.photo-1 img {
+  border-radius: 20px 0 0 20px;
+}
+
+.photo-2 {
+  grid-area: photo-2;
+}
+.photo-3 {
+  grid-area: photo-3;
+}
+
+.photo-3 img {
+  border-radius: 0 20px 0 0;
+}
+
+.photo-4 {
+  grid-area: photo-4;
+ }
+
+.photo-5 {
+  grid-area: photo-5;
+}
+
+.photo-5 img {
+  border-radius: 0 0 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "photo-1 photo-1 photo-2 photo-3" "photo-1 photo-1 photo-4 photo-5";
+}
+
+.photo-1 { grid-area: photo-1; }
+
+.photo-2 { grid-area: photo-2; }
+
+.photo-3 { grid-area: photo-3; }
+
+.photo-4 { grid-area: photo-4; }
+
+.photo-5 { grid-area: photo-5; }
