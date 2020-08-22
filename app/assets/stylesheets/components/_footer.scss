@@ -3,7 +3,7 @@
 .page-footer {
   width: 100vw;
   // overflow: hidden; // TAKE THIS OFF and fix the footer, it currently breaks the layout
-  border-top: 1px #6B2312 solid;
+  border-top: 1px $brand solid;
   height: 120px;
 
   a, i {
@@ -23,7 +23,7 @@
   margin-right: 3.5em;
 
   a {
-    color: #6B2312;
+    color: $brand;
   }
 }
 
@@ -32,7 +32,7 @@
   margin-left: 3.5em;
 
   a {
-    color: #6B2312;
+    color: $brand;
     margin-left: 10px;
     // margin-right: 10px;
   }
