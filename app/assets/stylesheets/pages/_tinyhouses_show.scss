@@ -6,15 +6,13 @@
   grid-row-gap: 15px;
   grid-template-areas: "photo-1 photo-1 photo-2 photo-3" "photo-1 photo-1 photo-4 photo-5";
   justify-content: center;
+  height: 500px;
+  border-radius: 20px;
+  overflow:hidden;
 }
 
 .photo-1 {
   grid-area: photo-1;
-
-}
-
-.photo-1 img {
-  border-radius: 20px 0 0 20px;
 }
 
 .photo-2 {
@@ -22,10 +20,6 @@
 }
 .photo-3 {
   grid-area: photo-3;
-}
-
-.photo-3 img {
-  border-radius: 0 20px 0 0;
 }
 
 .photo-4 {
@@ -36,24 +30,21 @@
   grid-area: photo-5;
 }
 
-.photo-5 img {
-  border-radius: 0 0 20px 0;
+.photo-1, .photo-2, .photo-3, .photo-4, .photo-5 {
+  background-size: cover;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas: "photo-1 photo-1 photo-2 photo-3" "photo-1 photo-1 photo-4 photo-5";
+.hosted-by-heading {
+  margin-top: 20px;
 }
 
-.photo-1 { grid-area: photo-1; }
-
-.photo-2 { grid-area: photo-2; }
-
-.photo-3 { grid-area: photo-3; }
-
-.photo-4 { grid-area: photo-4; }
-
-.photo-5 { grid-area: photo-5; }
+.overview-section {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.overview-section i {
+  font-size: 18px;
+  margin-right:5px;
+}
