@@ -2,6 +2,7 @@ class TinyhousesController < ApplicationController
   before_action :find_tinyhouse, only: [:show]
 
   def show
+    @amenities = Tinyhouse::AMENITIES
   end
 
   def index

@@ -40,11 +40,50 @@
 
 .overview-section {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 10px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
 .overview-section i {
-  font-size: 18px;
+  font-size: 16px;
   margin-right:5px;
+}
+.overview-section h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+.overview-section p {
+  color: rgb(113, 113, 113);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.description {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  word-break: break-word !important;
+}
+.amenities {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.amenities-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+text-align: left;
+}
+.amenities img {
+  height:24px;
+  padding-right: 5px;
 }
