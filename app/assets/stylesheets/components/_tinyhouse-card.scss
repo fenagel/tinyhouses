@@ -1,5 +1,15 @@
 // _tinyhouse-card.scss //
 
+.index-card {
+  border: 1px solid $brand;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 150px;
+}
+
 .carousel-custom-styles {
   border-radius: 10px ;
   overflow: hidden;
@@ -7,18 +17,13 @@
 
 .slide {
   width: 200px;
+  margin-left: 10px;
 }
 
-.index-card {
-  border: 1px solid $brand;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  width: 500px;
-  height: 150px;
-}
 
 .card-text {
+  padding: 25px;
+
   p {
     font-size: 12px;
   }
@@ -29,6 +34,6 @@
 }
 
 .test {
-  height: 100px;
+  height: 130px;
   object-fit: cover;
 }
