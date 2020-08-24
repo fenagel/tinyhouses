@@ -33,12 +33,8 @@
   margin: 0 auto;
 }
 
-// @media (max-width:480px)  { // iPhone X
-
-// }
-
-// @media (min-width:812px)  { //iPhone X Landscape
-//   .col-sm-12:last-child {
-//   display: none;
-//   }
-// }
+@media (max-width: 1023px) and (min-width: 573px) {
+  #last-home-card {
+    display: none;
+  }
+}
