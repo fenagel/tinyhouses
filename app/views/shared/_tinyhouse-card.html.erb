@@ -1,0 +1,15 @@
+<!-- _tinyhouse-card.html.erb -->
+
+<% tinyhouses.each do |tinyhouse| %>
+  <p><%= tinyhouse.title %></p>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <% tinyhouse.photos.each_with_index do |photo, index|%>
+      <div class="carousel-item <%= "active" if index == 0 %> carousel-custom-styles">
+        <%= cl_image_tag photo.key, width: '150', crop: 'fill', class: "d-block w-100" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+<% end %>
