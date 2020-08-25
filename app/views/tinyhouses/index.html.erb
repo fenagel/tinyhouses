@@ -1,29 +1,7 @@
 <!-- tinyhouses/index.html.erb -->
 <div class="index-flex">
   <div class="index-cards">
-  <% @tinyhouses.each do |tinyhouse| %>
-    <div class="index-card">
-      <div class="card-flexbox d-flex align-items-center">
-
-
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner carousel-custom-styles">
-          <% tinyhouse.photos.each_with_index do |photo, index|%>
-          <div class="carousel-item <%= "active" if index == 0 %>">
-            <%= cl_image_tag photo.key, width: '150', crop: 'fit', class: "d-block w-100 test" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="card-text">
-      <h4><%= tinyhouse.title %></h4>
-      <p><%= tinyhouse.location %></p>
-      <p><%= tinyhouse.price_per_day %>€ / night</p>
-    </div>
-  </div>
-  </div>
-  <% end %>
-
+  <%= render partial: '/shared/tinyhouse-card', locals: { tinyhouses: @tinyhouses } %>
 
   </div>
 </div>
@@ -31,4 +9,3 @@
 <div class="map">
   <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiaGFydmV5c3dpY2siLCJhIjoiY2thNm0zYzBqMDE3MTJxbXpteHpvc3MxMCJ9.28MPqPIljf6xkoFptooQZQ'>
 </div>
-

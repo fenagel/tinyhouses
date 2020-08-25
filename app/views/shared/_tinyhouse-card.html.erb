@@ -1,15 +1,25 @@
 <!-- _tinyhouse-card.html.erb -->
 
 <% tinyhouses.each do |tinyhouse| %>
-  <p><%= tinyhouse.title %></p>
+    <div class="index-card">
+      <div class="card-flexbox d-flex align-items-center">
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <% tinyhouse.photos.each_with_index do |photo, index|%>
-      <div class="carousel-item <%= "active" if index == 0 %> carousel-custom-styles">
-        <%= cl_image_tag photo.key, width: '150', crop: 'fill', class: "d-block w-100" %>
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner carousel-custom-styles">
+          <% tinyhouse.photos.each_with_index do |photo, index|%>
+          <div class="carousel-item <%= "active" if index == 0 %>">
+            <%= cl_image_tag photo.key, width: '150', crop: 'fit', class: "d-block w-100 test" %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+    <div class="card-text">
+      <h4><%= tinyhouse.title %></h4>
+      <div class="underline"></div>
+      <p><%= tinyhouse.location %></p>
+      <p><%= tinyhouse.price_per_day %>€ / Night</p>
     </div>
   </div>
-<% end %>
+  </div>
+  <% end %>
