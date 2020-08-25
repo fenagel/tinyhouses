@@ -1,9 +1,7 @@
 Ruby on Rails APP
 
-AirBNB clone
+an AirBNB clone (wip).
 
-W.I.P.
-
-Developers
+Developers:
 Felix Nagel ||
 Dareos Khalili
