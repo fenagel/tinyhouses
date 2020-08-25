@@ -34,7 +34,7 @@
   background-size: cover;
 }
 
-.hosted-by-heading {
+.show-right-part, .show-left-part {
   margin-top: 20px;
 }
 
@@ -42,8 +42,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 10px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
 }
 .overview-section i {
   font-size: 16px;
@@ -66,24 +64,40 @@
   font-size: 16px !important;
   line-height: 24px !important;
   word-break: break-word !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .amenities {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 10px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+}
+
+.bordertop {
+  border-top: 1px solid $brand;
 }
 
 .amenities-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: 1fr;
-grid-column-gap: 0px;
+grid-column-gap: 20px;
 grid-row-gap: 0px;
 text-align: left;
 }
+
 .amenities img {
   height:24px;
   padding-right: 5px;
+}
+
+.show-form {
+  border: 1px solid $brand;
+  border-radius: 10px;
+}
+
+#price-tag {
+  font-size: 22px;
+  line-height: 26px;
+  padding-top: 10px;
 }
