@@ -1,0 +1,74 @@
+// _tinyhouse-card.scss //
+
+.index-card {
+  width: 420px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 20px;
+    &:hover {
+    transform: translate(3px, 3px); // translate(x, y)
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
+  }
+  &:active, {
+    transform: translate(2px, 2px); // translate(x, y)
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.25);
+  }
+}
+
+.index-card {
+
+
+
+}
+
+.carousel-custom-styles {
+  border-radius: 10px ;
+  overflow: hidden;
+}
+
+.slide {
+  width: 200px;
+  margin-left: 10px;
+}
+
+
+.card-text {
+  padding: 25px;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.card-flexbox {
+  height: 100%;
+}
+
+.test {
+  height: 130px;
+  object-fit: cover;
+}
+
+.underline {
+  width: 30px;
+  border: 1px $brand solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
