@@ -7,8 +7,8 @@ class Tinyhouse < ApplicationRecord
   validates :title, :location, :price_per_day, :description, presence: true
 
   geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_address?
-  
+  after_validation :geocode, if: :will_save_change_to_location?
+
   AMENITIES = [
     'Wifi', 'Dryer', 'Iron', 'TV', 'Washer', 'Hygiene essentials', 'Heating',
     'Hot water', 'Bathtub', 'Kitchen', 'Stove', 'Refrigerator', 'Microwave',

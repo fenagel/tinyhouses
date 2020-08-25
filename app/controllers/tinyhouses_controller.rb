@@ -6,14 +6,15 @@ class TinyhousesController < ApplicationController
   end
 
   def index
-    @tinyhouses = Tinyhouse.all
-    # @flats = Flat.geocoded # returns flats with coordinates
+    # @tinyhouses = Tinyhouse.all
+    @tinyhouses = Tinyhouse.geocoded # returns tinyhouses with coordinates
 
-    # @markers = @flats.map do |flat|
-    #   {
-    #     lat: flat.latitude,
-    #     lng: flat.longitude
-    #   }
+    @markers = @tinyhouses.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   private
