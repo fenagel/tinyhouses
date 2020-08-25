@@ -33,6 +33,7 @@
     <div class="show-right-part col">
       <div class="show-form">
         <p id="price-tag"><strong>€<%= @tinyhouse.price_per_day %></strong>/night</p>
+        <%= javascript_pack_tag 'datepicker', {prerender: true} %>
       </div>
     </div>
   </div>
