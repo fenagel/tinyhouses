@@ -5,4 +5,12 @@ class Tinyhouse < ApplicationRecord
   has_many_attached :photos
 
   validates :title, :location, :price_per_day, :description, presence: true
+  AMENITIES = [
+    'Wifi', 'Dryer', 'Iron', 'TV', 'Washer', 'Hygiene essentials', 'Heating',
+    'Hot water', 'Bathtub', 'Kitchen', 'Stove', 'Refrigerator', 'Microwave',
+    'Dishwasher', 'Coffee maker', 'Cooking basics', 'Dishes and silverware',
+    'Oven', 'Hair dryer', 'Shower gel', 'Bed linens', 'Smoke alarm',
+    'Fire extinguisher', 'Air conditioning', 'Shampoo', 'Private entrance',
+    'Laptop-friendly workspace'
+  ]
 end
