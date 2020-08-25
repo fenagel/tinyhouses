@@ -5,5 +5,5 @@ AirBNB clone
 W.I.P.
 
 Developers
-Felix Nagel
+Felix Nagel ||
 Dareos Khalili
