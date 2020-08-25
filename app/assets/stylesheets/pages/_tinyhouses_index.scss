@@ -1,6 +1,6 @@
 // _tinyhousesindex.scss
-.map {
-  height: 100vh;
+#map {
+  height: 93vh;
   position: sticky;
   top: 0;
 }
@@ -12,4 +12,6 @@
 .index-cards {
   display: grid;
   flex-grow: 1;
+  padding-left: 80px;
+  padding-right: 80px;
 }
