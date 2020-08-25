@@ -12,3 +12,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}

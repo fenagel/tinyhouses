@@ -3,13 +3,14 @@
 import "mapbox-gl/dist/mapbox-gl"
 import mapboxgl from 'mapbox-gl';
 
+const mapElement = document.getElementById('map'); // picks the div where the map will be displayed
+
 const initMapbox = () => {
-  const mapElement = document.getElementById('map'); // picks the div where the map will be displayed
 
   const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 5000 });
+    map.fitBounds(bounds, { padding: 70, maxZoom: 25, duration: 0 });
   };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
@@ -20,11 +21,15 @@ const initMapbox = () => {
     });
 
   const markers = JSON.parse(mapElement.dataset.markers);
+
   markers.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow.content);
     new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup)
       .addTo(map);
     });
+
   fitMapToMarkers(map, markers);
   }
 };

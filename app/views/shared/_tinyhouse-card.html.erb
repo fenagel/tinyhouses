@@ -1,6 +1,7 @@
 <!-- tinyhouse-card -->
 
 <% tinyhouses.each do |tinyhouse| %>
+<%= link_to tinyhouse_path(tinyhouse) do %>
     <div class="index-card">
       <div class="card-flexbox d-flex align-items-center">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -20,4 +21,5 @@
       </div>
     </div>
   </div>
+<% end %>
 <% end %>
