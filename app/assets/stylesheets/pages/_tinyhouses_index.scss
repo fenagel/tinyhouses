@@ -1,10 +1,4 @@
 // _tinyhousesindex.scss
-#map {
-  height: 93vh;
-  position: sticky;
-  top: 0;
-}
-
 .index-flex {
   display: flex;
 }
@@ -16,6 +10,12 @@
   padding-right: 80px;
 }
 
-g {
+#map {
+  height: 93vh;
+  position: sticky;
+  top: 0;
+}
+
+g { // picks the marker on the map.
   fill: #b14339;
 }
