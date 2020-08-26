@@ -2,10 +2,15 @@
 <div class="index-flex">
   <div class="index-cards">
   <%= render partial: '/shared/tinyhouse-card', locals: { tinyhouses: @tinyhouses } %>
-
   </div>
-</div>
 
-<div class="map">
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiaGFydmV5c3dpY2siLCJhIjoiY2thNm0zYzBqMDE3MTJxbXpteHpvc3MxMCJ9.28MPqPIljf6xkoFptooQZQ'>
+  <div class="map" id="map"
+       style="width: 100%;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<!--   <div class="map">
+    <img id="map" src='https://cdn-images-1.medium.com/max/1600/0*yPSQlTHRvLaIVBcG.jpg'>
+  </div> -->
+
+
 </div>

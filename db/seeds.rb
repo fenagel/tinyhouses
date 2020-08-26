@@ -4,6 +4,8 @@ User.destroy_all
 
 user_one = User.create!(email: 'bob@gmail.com', password: '123456', username: 'Bob')
 user_two = User.create!(email: 'joe@gmail.com', password: '123456', username: 'Joe')
+puts "Two Users created"
+
 tinyhouse_one = Tinyhouse.create!(
   title: 'Mystery',
   user: user_one,
@@ -38,6 +40,7 @@ tinyhouse_five = Tinyhouse.create!(
   location: 'Pankstraße 31',
   price_per_day: 33,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
+puts "Five Tinyhouses created"
 
 tinyhouse_one_img_one = URI.open('https://mir-s3-cdn-cf.behance.net/project_modules/fs/2f03ff79679537.5d53ca226ecd8.jpg')
 tinyhouse_one_img_two = URI.open('https://mir-s3-cdn-cf.behance.net/project_modules/fs/95020c79679537.5ccac1592b09f.png')
@@ -113,3 +116,5 @@ tinyhouse_five.photos.attach(io: tinyhouse_five_img_four, filename: 'house0504.j
 tinyhouse_five.photos.attach(io: tinyhouse_five_img_five, filename: 'house0505.jpgs', content_type: 'image/jpg')
 # tinyhouse_five.photos.attach(io: tinyhouse_five_img_six, filename: 'house0506.jpgs', content_type: 'image/jpg')
 tinyhouse_five.save!
+
+puts "Images for Tinyhouses created"

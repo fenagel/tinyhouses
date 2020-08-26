@@ -6,14 +6,15 @@ class TinyhousesController < ApplicationController
   end
 
   def index
-    @tinyhouses = Tinyhouse.all
-    # @flats = Flat.geocoded # returns flats with coordinates
+    @tinyhouses = Tinyhouse.geocoded # returns only the tinyhouses which Geocoder retrieved coordinates for. The rest is omitted.
 
-    # @markers = @flats.map do |flat|
-    #   {
-    #     lat: flat.latitude,
-    #     lng: flat.longitude
-    #   }
+    @markers = @tinyhouses.map do |tinyhouse| # creates markers and the infoWindow popup for the map
+      {
+        lat: tinyhouse.latitude,
+        lng: tinyhouse.longitude,
+        infoWindow: { content: render_to_string(partial: "/shared/info_window", locals: { tinyhouse: tinyhouse }) }
+      }
+    end
   end
 
   def new
@@ -25,5 +26,4 @@ class TinyhousesController < ApplicationController
   def find_tinyhouse
     @tinyhouse = Tinyhouse.find(params[:id])
   end
-
 end
