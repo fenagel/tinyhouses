@@ -1,27 +1,40 @@
-  <div class="container">
-    <h1><%= @tinyhouse.title %></h1>
-    <div class="photo-grid">
-      <% @tinyhouse.photos.each_with_index do |photo, idx| %>
-        <div class="photo-<%= idx + 1 %>" style="background-image:url(<%= cl_image_path(photo.key, crop: 'fill') %>)">
-        </div>
-      <% end %>
+<div class="container">
+  <h1><%= @tinyhouse.title %></h1>
+  <div class="photo-grid">
+    <% @tinyhouse.photos.each_with_index do |photo, idx| %>
+      <div class="photo-<%= idx + 1 %>" style="background-image:url(<%= cl_image_path(photo.key, crop: 'fill') %>)">
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="show-left-part col">
+      <div class="hosted-by-heading">
+        <h4>This Tinyhouse is hosted by <%= @tinyhouse.user.username %></h4>
+      </div>
+      <div class="bordertop"></div>
+      <div class="overview-section">
+        <h4><i class="fas fa-key"></i>Great check-in experience</h4>
+        <p>100% of recent guests gave the check-in process a 5-star rating</p>
+        <h4><i class="fas fa-wifi"></i>Ameneties for everyday living</h4>
+        <p>The host has equipped this place for long stays - wifi, free parking, and heating included.</p>
+        <h4><i class="far fa-calendar-alt"></i>Cancellation policy</h4>
+        <p>Cancel before 5:00 PM a day before and get a full refund, minus the service fee</p>
+      </div>
+      <div class="bordertop"></div>
+      <p class="description"><%= @tinyhouse.description %></p>
+      <div class="bordertop"></div>
+      <div class="amenities amenities-grid">
+        <% @amenities.each do |a| %>
+            <p><%= image_tag("#{a}.svg")%><%= a %></p>
+        <% end %>
+      </div>
+      <div class="bordertop"></div>
     </div>
-    <div class="hosted-by-heading">
-      <h4>This Tinyhouse is hosted by <%= @tinyhouse.user.username %></h4>
-    </div>
-    <div class="overview-section">
-      <h4><i class="fas fa-key"></i>Great check-in experience</h4>
-      <p>100% of recent guests gave the check-in process a 5-star rating</p>
-      <h4><i class="fas fa-wifi"></i>Ameneties for everyday living</h4>
-      <p>The host has equipped this place for long stays - wifi, free parking, and heating included.</p>
-      <h4><i class="far fa-calendar-alt"></i>Cancellation policy</h4>
-      <p>Cancel before 5:00 PM a day before and get a full refund, minus the service fee</p>
-    </div>
-    <p class="description"><%= @tinyhouse.description %></p>
-    <div class="amenities amenities-grid">
-      <% @amenities.each do |a| %>
-          <p><%= image_tag("#{a}.svg")%><%= a %></p>
-      <% end %>
+    <div class="show-right-part col">
+      <div class="show-form">
+        <p id="price-tag"><strong>€<%= @tinyhouse.price_per_day %></strong>/night</p>
+        <%= javascript_pack_tag 'hello_react', {prerender: true} %>
+      </div>
     </div>
   </div>
-
+</div>
