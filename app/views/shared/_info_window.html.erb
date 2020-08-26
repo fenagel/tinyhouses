@@ -1,5 +1,23 @@
 <!-- _info_window.html.erb -->
 <%= link_to tinyhouse_path(tinyhouse) do %>
-  <p><%= tinyhouse.location %></p>
-  <h4><%= tinyhouse.title.capitalize %></h4>
+<div class="info-window-card">
+      <div class="card-flexbox d-flex align-items-center">
+        <div id="carouselExampleSlidesOnly" class="carousel info-window-test" data-ride="carousel">
+          <div class="carousel-inner carousel-custom-styles">
+            <% tinyhouse.photos.each_with_index do |photo, index|%>
+            <div class="carousel-item <%= "active" if index == 0 %>">
+              <%= cl_image_tag photo.key, crop: 'fit', class: "d-block w-100 test" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="info-window-text">
+      <div class="underline"></div>
+      <p><%= tinyhouse.location %></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <h4><%= tinyhouse.title.capitalize %></h4>
+        <p><%= tinyhouse.price_per_day %>€ / Night</p>
+      </div>
+    </div>
 <% end %>
