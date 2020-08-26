@@ -10,11 +10,11 @@ class Tinyhouse < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
 
   AMENITIES = [
-    'Wifi', 'Dryer', 'Iron', 'TV', 'Washer', 'Hygiene essentials', 'Heating',
+    'Wifi', 'Dryer', 'Iron', 'TV', 'Washer', 'Essentials', 'Heating',
     'Hot water', 'Bathtub', 'Kitchen', 'Stove', 'Refrigerator', 'Microwave',
-    'Dishwasher', 'Coffee maker', 'Cooking basics', 'Dishes and silverware',
+    'Dishwasher', 'Coffee maker', 'Cooking basics', 'Dishes',
     'Oven', 'Hair dryer', 'Shower gel', 'Bed linens', 'Smoke alarm',
     'Fire extinguisher', 'Air conditioning', 'Shampoo', 'Private entrance',
-    'Laptop-friendly workspace'
+    'Laptop workspace'
   ]
 end
