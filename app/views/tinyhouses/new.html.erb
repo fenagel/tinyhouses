@@ -1,0 +1,13 @@
+<div class="container">
+  <%= simple_form_for @tinyhouse do |f| %>
+    <%= f.input :title, label: 'Title for your listing', error: 'Titles are mandatory, please specify one' %>
+    <%= f.input :location, label: 'Please provide your address in the following format: street name, city' %>
+    <%= f.input :description, as: :text %>
+
+
+    <%= f.input :amenities, collection: Tinyhouse::AMENITIES, as: :check_boxes %>
+
+
+    <%= f.button :button, "Create Your Listing", class: "primary-button" %>
+  <% end %>
+</div>

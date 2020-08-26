@@ -16,6 +16,10 @@ class TinyhousesController < ApplicationController
     #   }
   end
 
+  def new
+    @tinyhouse = Tinyhouse.new
+  end
+
   private
 
   def find_tinyhouse
