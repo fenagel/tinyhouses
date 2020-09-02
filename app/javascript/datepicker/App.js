@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-
+import './react_dates_override.scss';
 import { DateRangePicker } from 'react-dates';
 
 class App extends Component {
@@ -26,6 +26,8 @@ class App extends Component {
           onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+          startDatePlaceholderText="Check-in"
+          endDatePlaceholderText="Check-out"
         />
       </div>
     );

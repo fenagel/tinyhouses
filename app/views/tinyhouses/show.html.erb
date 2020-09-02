@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <div class="row">
-    <div class="show-left-part col">
+    <div class="show-left-part col-7">
       <div class="hosted-by-heading">
         <h4>This Tinyhouse is hosted by <%= @tinyhouse.user.username %></h4>
       </div>
@@ -30,9 +30,10 @@
       </div>
       <div class="bordertop"></div>
     </div>
-    <div class="show-right-part col">
+    <div class="show-right-part col-5">
       <div class="show-form">
         <p id="price-tag"><strong>€<%= @tinyhouse.price_per_day %></strong>/night</p>
+        <div id="root"></div>
         <%= javascript_pack_tag 'datepicker', {prerender: true} %>
       </div>
     </div>
