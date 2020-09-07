@@ -3,6 +3,7 @@ class TinyhousesController < ApplicationController
 
   def show
     @amenities = Tinyhouse::AMENITIES
+    @trip = Trip.new
   end
 
   def index

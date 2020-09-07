@@ -33,8 +33,17 @@
     <div class="show-right-part col-5">
       <div class="show-form">
         <p id="price-tag"><strong>€<%= @tinyhouse.price_per_day %></strong>/night</p>
-        <div id="root"></div>
-        <%= javascript_pack_tag 'datepicker', {prerender: true} %>
+        <div class="widget-content" data-unavailable="<%= @tinyhouse.unavailable_dates.to_json %>">
+            <%# if current_user.id != @tinyhouse.user_id  %>
+            <%= simple_form_for([@tinyhouse, @trip]) do |f| %>
+              <%= f.input :check_in, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
+              <%= f.input :check_out, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
+              <%= f.submit "book", class: "btn btn-primary btn-lg btn-block" %>
+            <% end %>
+            <%# end %>
+         </div>
+       <!--   <div id="root" data-unavailable="<%#= @tinyhouse.unavailable_dates.to_json %>"></div>
+         <%#= javascript_pack_tag 'datepicker', {prerender: true} %> -->
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :trips, only: [ :create ]
   end
 
-  resources :trips, only: [ :index, :show, :destroy ] do
+  resources :trips, only: [ :destroy, :create ] do
     resources :reviews, only: [ :new, :create ]
   end
 
