@@ -1,0 +1,32 @@
+// _search_bars.scss
+.btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.form-control {
+  width: 280px;
+  position: relative;
+  border-radius: 50px;
+  height: 3em;
+  // background-color: transparent;
+  backdrop-filter: blur(5px);
+  // border: solid 1px $brand;
+
+  &:focus{
+    // box-shadow: 0 0px 6px $brand;
+    // box-shadow: 0 0 15px $brand;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    outline: none !important;
+    border: none;
+  }
+}
+
+.search-bar {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 2;
+}

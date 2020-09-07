@@ -9,35 +9,35 @@ puts "Two Users created"
 tinyhouse_one = Tinyhouse.create!(
   title: 'Mystery',
   user: user_one,
-  location: 'Boxhagener Straße 74',
+  location: 'Boxhagener Straße 74, Berlin, Germany',
   price_per_day: 25,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
 
 tinyhouse_two = Tinyhouse.create!(
   title: 'Nova',
   user: user_two,
-  location: 'Chodowiekistraße 27',
+  location: 'Sonntagstraße 24, Berlin, Germany',
   price_per_day: 35,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
 
 tinyhouse_three = Tinyhouse.create!(
   title: 'Indigo',
   user: user_one,
-  location: 'Sonntagstraße 2',
+  location: 'Sonntagstraße 2, Berlin, Germany',
   price_per_day: 44,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
 
 tinyhouse_four = Tinyhouse.create!(
   title: 'Epikur',
   user: user_two,
-  location: 'Friedrichstraße 51',
+  location: 'Tankefuldvej 48, Svendborg, Denmark',
   price_per_day: 61,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
 
 tinyhouse_five = Tinyhouse.create!(
   title: 'Babylon',
   user: user_one,
-  location: 'Pankstraße 31',
+  location: 'Pankstraße 31, Berlin, Germany',
   price_per_day: 33,
   description: 'a well designed tiny house that looks and feels spacious. It balances warm and light tones well to create a clean yet cozy environment. Functionally, the floor plan is unique and functional especially given its extra 2 feet of width. At its competitive starting price point, and the ability to ship to anywhere in the world, this is surely a top choice for those looking to go tiny.')
 puts "Five Tinyhouses created"

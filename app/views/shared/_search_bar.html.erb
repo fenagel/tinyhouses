@@ -1,0 +1,11 @@
+<!-- _search_bar.html.erb -->
+<div class="search-bar d-flex">
+  <%= form_tag tinyhouses_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Where are you going?"
+    %>
+    <%= submit_tag "🔍", class: "btn btn-flat" %>
+  <% end %>
+</div>
