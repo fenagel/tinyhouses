@@ -16,3 +16,11 @@
   bottom: 250px;
   left: 90px;
 }
+
+
+@media(max-width: 420px) {
+  .hero-wrap{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
