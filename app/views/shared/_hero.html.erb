@@ -1,11 +1,14 @@
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-text">
-    <h1>
-      Bored of humans?
-    </h1>
-    <p>
-      Book your next escape!
-    </p>
+  <div class="hero-wrap">
+    <div class="hero-text">
+      <h1>
+        Big holidays in tiny houses!
+      </h1>
+      <p>
+        Explore countless destinations in unique Tinyhouses!
+      </p>
+      <%= render partial: '/shared/search_bar_home', locals: { tinyhouses: @tinyhouses } %>
+    </div>
   </div>
 </div>

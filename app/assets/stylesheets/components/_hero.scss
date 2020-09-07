@@ -11,8 +11,16 @@
 }
 
 .hero-text {
-    color: #191D29;
-    position: absolute;
-    bottom: 250px;
-    left: 90px;
+  color: #191D29;
+  position: absolute;
+  bottom: 250px;
+  left: 90px;
+}
+
+
+@media(max-width: 420px) {
+  .hero-wrap{
+    width: 80%;
+    margin: 0 auto;
+  }
 }

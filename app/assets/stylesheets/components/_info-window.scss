@@ -6,7 +6,6 @@
 
 .mapboxgl-popup-content {
   padding: 0;
-  // border: 1px solid transparent;
   border-radius: 15px;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
 
@@ -23,4 +22,20 @@
 .info-window-test {
   width: 100%;
   background-size: cover;
+}
+
+
+@media(max-width: 420px) {
+  .mapboxgl-popup {
+    width: 180px;
+  }
+
+  .info-window-text {
+    padding: 20px 20px 10px 20px;
+    line-height: 1;
+
+    h4 {
+      font-size: 1.5em;
+    }
+  }
 }

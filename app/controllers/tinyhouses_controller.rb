@@ -6,7 +6,16 @@ class TinyhousesController < ApplicationController
   end
 
   def index
-    @tinyhouses = Tinyhouse.geocoded # returns only the tinyhouses which Geocoder retrieved coordinates for. The rest is omitted.
+    if params[:query].present?
+      sql_query = " \
+        tinyhouses.title @@ :query \
+        OR tinyhouses.location @@ :query \
+        OR tinyhouses.description @@ :query \
+      "
+      @tinyhouses = Tinyhouse.where(sql_query, query: "%#{params[:query]}%").geocoded # returns only the tinyhouses which Geocoder retrieved coordinates for. The rest is omitted.
+    else
+      @tinyhouses = Tinyhouse.all.geocoded
+    end
 
     @markers = @tinyhouses.map do |tinyhouse| # creates markers and the infoWindow popup for the map
       {
