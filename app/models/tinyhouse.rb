@@ -17,4 +17,9 @@ class Tinyhouse < ApplicationRecord
     'Fire extinguisher', 'Air conditioning', 'Shampoo', 'Private entrance',
     'Laptop workspace'
   ]
+  def unavailable_dates
+    trips.pluck(:check_in, :check_out).map do |range|
+      { from: range[0], to: range[1] }
+    end
+  end
 end

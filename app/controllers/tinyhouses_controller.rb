@@ -3,6 +3,7 @@ class TinyhousesController < ApplicationController
 
   def show
     @amenities = Tinyhouse::AMENITIES
+    @trip = Trip.new
   end
 
   def index
@@ -33,6 +34,6 @@ class TinyhousesController < ApplicationController
   private
 
   def find_tinyhouse
-    @tinyhouse = Tinyhouse.find(params[:id])
+    @tinyhouse = Tinyhouse.with_attached_photos.includes(trips: :reviews).find(params[:id])
   end
 end
