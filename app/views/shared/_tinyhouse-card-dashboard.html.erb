@@ -17,6 +17,12 @@
       <p><%= tinyhouse.location %></p>
       <p><%= tinyhouse.price_per_day %>€ / Night</p>
     </div>
+    <div class="tcd-btns d-flex justify-content-center">
+        <%= link_to "delete", tinyhouse_path(tinyhouse),  method: :delete, data: {confirm: "Are you sure you want to delete dat shit?" }, class: "dash-bt" %>
+    </div>
+    <div class="tcd-btns d-flex justify-content-center">
+        <%= link_to "edit", tinyhouse_path(tinyhouse), class: "dash-bt" %>
+    </div>
   </div>
 <% end %>
 <% end %>
