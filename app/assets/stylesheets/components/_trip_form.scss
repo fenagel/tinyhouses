@@ -1,10 +1,9 @@
 .show-form {
   border: 1px solid $brand;
   border-radius: 10px;
-  padding-left: 20px;
-  padding-top: 20px;
   width: 100%;
 }
+
 .widget-content {
   width: 100%;
   padding: 20px;
@@ -24,8 +23,20 @@
     max-height: 999em;
 }
 
-
-
-#trip_check_in, #trip_check_out {
+#new_trip {
   width: 90% !important;
+  margin: 0 auto;
+}
+
+.form-button {
+  opacity: 0.7;
+  color: $brand;
+  border: 1px solid $brand;
+  border-radius: 30px;
+  padding: 2px 15px;
+  background-color: white;
+
+  &:hover {
+    opacity: 1;
+  }
 }

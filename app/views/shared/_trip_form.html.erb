@@ -3,8 +3,8 @@
     <%= simple_form_for([@tinyhouse, @trip]) do |f| %>
     <div class="form-inputs">
       <div class="form-row">
-      <%= f.input :check_in, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
-      <%= f.input :check_out, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
+      <%= f.input :check_in, as: :string, label: "Check-in", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
+      <%= f.input :check_out, as: :string, label: 'Check-out'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
     </div>
       </div>
       <div class="costs costs-hidden" data-rate="<%= @tinyhouse.price_per_day.to_json %>">
@@ -23,8 +23,8 @@
           </tr>
         </table>
       </div>
-    <div class="form-row">
-    <%= f.submit "book", class: "primary-button" %>
+    <div class="form-row justify-content-center">
+    <%= f.submit "book now", class: "form-button" %>
     </div>
     <% end %>
     <%# end %>
