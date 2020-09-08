@@ -1,0 +1,3 @@
+<!-- show.html.erb -->
+<h3><%=@user.username %></h3>
+<%= render partial: '/shared/tinyhouse-card', locals: { tinyhouses: @user.tinyhouses } %>
