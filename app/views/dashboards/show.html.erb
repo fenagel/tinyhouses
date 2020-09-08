@@ -1,3 +1,9 @@
 <!-- show.html.erb -->
-<h3><%=@user.username %></h3>
-<%= render partial: '/shared/tinyhouse-card', locals: { tinyhouses: @user.tinyhouses } %>
+<div class="dashboard-container">
+  <h3 style="margin-left:20px;"><%=@user.username %>'s Tinyhouses</h3>
+  <div class="underline-dashboard"></div>
+  <div class="d-flex">
+    <%= render partial: '/shared/tinyhouse-card-dashboard', locals: { tinyhouses: @tinyhouses } %>
+  </div>
+  <div class="underline-dashboard"></div>
+</div>

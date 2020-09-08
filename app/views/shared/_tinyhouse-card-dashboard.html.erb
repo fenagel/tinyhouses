@@ -1,0 +1,22 @@
+<!-- _tinyhouse-card-dashboard.html.erb -->
+<% tinyhouses.each do |tinyhouse| %>
+<%= link_to tinyhouse_path(tinyhouse) do %>
+    <div class="index-card-tcd tcd">
+      <div id="carouselExampleSlidesOnly" class="carousel slide-tcd" data-ride="carousel">
+        <div class="carousel-inner carousel-custom-styles-tcd">
+          <% tinyhouse.photos.each_with_index do |photo, index|%>
+          <div class="carousel-item <%= "active" if index == 0 %>">
+            <%= cl_image_tag photo.key, crop: 'fit', class: "d-block w-100 test-tcd" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="card-text-tcd">
+      <h4><%= tinyhouse.title %></h4>
+      <div class="underline-tcd"></div>
+      <p><%= tinyhouse.location %></p>
+      <p><%= tinyhouse.price_per_day %>€ / Night</p>
+    </div>
+  </div>
+<% end %>
+<% end %>
