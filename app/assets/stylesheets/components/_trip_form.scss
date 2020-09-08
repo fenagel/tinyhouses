@@ -1,0 +1,31 @@
+.show-form {
+  border: 1px solid $brand;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+.widget-content {
+  width: 100%;
+  padding: 20px;
+  .dates {
+    margin-bottom: 10px;
+  }
+}
+
+.costs {
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2000ms ease-in-out;
+}
+
+.costs.is-visible {
+    max-height: 999em;
+}
+
+
+
+#trip_check_in, #trip_check_out {
+  width: 90% !important;
+}

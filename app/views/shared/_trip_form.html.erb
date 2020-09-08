@@ -1,0 +1,31 @@
+<div class="widget-content" data-unavailable="<%= @tinyhouse.unavailable_dates.to_json %>">
+    <%# if current_user.id != @tinyhouse.user_id  %>
+    <%= simple_form_for([@tinyhouse, @trip]) do |f| %>
+    <div class="form-inputs">
+      <div class="form-row">
+      <%= f.input :check_in, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
+      <%= f.input :check_out, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
+    </div>
+      </div>
+      <div class="costs costs-hidden" data-rate="<%= @tinyhouse.price_per_day.to_json %>">
+        <table class="table">
+          <tr>
+            <td>€<%= @tinyhouse.price_per_day %> x <span id="days">0</span> days</td>
+            <td class="text-right">€<span id="price">0</span></td>
+          </tr>
+          <tr>
+            <td>Service fee</td>
+            <td class="text-right">€<span id="service-fee">0</span></td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td class="text-right">€<span id=total-price>0</span></td>
+          </tr>
+        </table>
+      </div>
+    <div class="form-row">
+    <%= f.submit "book", class: "primary-button" %>
+    </div>
+    <% end %>
+    <%# end %>
+  </div>
