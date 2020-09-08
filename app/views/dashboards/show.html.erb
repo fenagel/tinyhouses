@@ -1,6 +1,6 @@
 <!-- show.html.erb -->
 <div class="dashboard-container">
-  <h3 style="margin-left:20px;"><%=@user.username %>'s Tinyhouses</h3>
+  <h3 style="margin-left:20px; margin-top: 30px;"><%=@user.username %>'s Tinyhouses</h3>
   <div class="underline-dashboard"></div>
   <div class="d-flex">
     <%= render partial: '/shared/tinyhouse-card-dashboard', locals: { tinyhouses: @tinyhouses } %>
