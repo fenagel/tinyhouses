@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   def create
     @tinyhouse = Tinyhouse.find(params[:tinyhouse_id])
-    @trip = Trip.new
+    @trip = Trip.new(trip_params)
     @trip.tinyhouse = @tinyhouse
     @trip.user = current_user
     if @trip.save
@@ -9,5 +9,11 @@ class TripsController < ApplicationController
     else
       render 'tinyhouses/show'
     end
+  end
+
+  private
+
+  def trip_params
+    params.require(:trip).permit(:check_in, :check_out)
   end
 end

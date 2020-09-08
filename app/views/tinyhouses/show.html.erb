@@ -38,7 +38,7 @@
             <%= simple_form_for([@tinyhouse, @trip]) do |f| %>
               <%= f.input :check_in, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
               <%= f.input :check_out, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
-              <%= f.submit "book", class: "btn btn-primary btn-lg btn-block" %>
+              <%= f.submit "book", class: "primary-button" %>
             <% end %>
             <%# end %>
          </div>
