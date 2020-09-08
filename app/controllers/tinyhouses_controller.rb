@@ -1,5 +1,5 @@
 class TinyhousesController < ApplicationController
-  before_action :find_tinyhouse, only: [:show]
+  before_action :find_tinyhouse, only: [:show, :destroy]
 
   def show
     @amenities = Tinyhouse::AMENITIES
@@ -29,6 +29,12 @@ class TinyhousesController < ApplicationController
 
   def new
     @tinyhouse = Tinyhouse.new
+  end
+
+  def destroy
+    @tinyhouse.destroy
+
+    redirect_to tinyhouses_path
   end
 
   private
