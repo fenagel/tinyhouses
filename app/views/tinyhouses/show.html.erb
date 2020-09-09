@@ -6,12 +6,21 @@
       </div>
     <% end %>
   </div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide mobile-only" data-ride="carousel">
+    <div class="carousel-inner">
+      <% @tinyhouse.photos.each_with_index do |photo, index|%>
+        <div class="carousel-item <%= "active" if index == 0 %>">
+          <%= cl_image_tag photo.key, crop: 'fit', class: "d-block w-100" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
   <div class="row">
-    <div class="show-left-part col-7">
+    <div class="show-left-part col-sm-12 col-md-7">
       <div class="hosted-by-heading">
         <h4>This Tinyhouse is hosted by <%= @tinyhouse.user.username %></h4>
       </div>
-      <div class="bordertop"></div>
+      <hr>
       <div class="overview-section">
         <h4><i class="fas fa-key"></i>Great check-in experience</h4>
         <p>100% of recent guests gave the check-in process a 5-star rating</p>
@@ -20,21 +29,19 @@
         <h4><i class="far fa-calendar-alt"></i>Cancellation policy</h4>
         <p>Cancel before 5:00 PM a day before and get a full refund, minus the service fee</p>
       </div>
-      <div class="bordertop"></div>
+      <hr>
       <p class="description"><%= @tinyhouse.description %></p>
-      <div class="bordertop"></div>
+    </div>
+    <div class="show-right-part col-sm-12 col-md-5">
+      <div class="show-form">
+        <%= render "shared/trip_form" %>
+      </div>
+    </div>
       <div class="amenities amenities-grid">
         <% @amenities.each do |a| %>
             <p><%= image_tag("#{a}.svg")%><%= a %></p>
         <% end %>
       </div>
-      <div class="bordertop"></div>
-    </div>
-    <div class="show-right-part col-5">
-      <div class="show-form">
-        <%= render "shared/trip_form" %>
-      </div>
-    </div>
     </div>
   </div>
 </div>

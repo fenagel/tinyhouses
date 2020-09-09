@@ -1,7 +1,9 @@
 .show-form {
   border: 1px solid $brand;
   border-radius: 10px;
-  width: 100%;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .widget-content {
@@ -26,6 +28,14 @@
 #new_trip {
   width: 90% !important;
   margin: 0 auto;
+}
+
+#trip_check_in, #trip_check_out {
+  width: 90% !important;
+}
+.trip_check_in, .trip_check_out {
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .form-button {

@@ -4,7 +4,7 @@
 <%= link_to tinyhouse_path(tinyhouse) do %>
     <div class="index-card">
       <div class="card-flexbox d-flex align-items-center">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide thc-slide" data-ride="carousel">
           <div class="carousel-inner carousel-custom-styles">
             <% tinyhouse.photos.each_with_index do |photo, index|%>
             <div class="carousel-item <%= "active" if index == 0 %>">
