@@ -1,18 +1,13 @@
 // Specific CSS for your home-page
-.wrapper-skewed {
-  padding: 40px;
-  margin-bottom: 80px;
-  margin-top: 80px;
+.block-skewed {
   display:flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  transform: skew(0deg,-3deg);
-}
-.block-skewed {
   height: auto;
   width: 100%;
-  margin: 40px 0;
-  padding: 40px 40px 0 40px;
+  margin: 80px 0;
+  padding: 20px;
   position: relative;
   color:white;
   background: linear-gradient(
@@ -24,6 +19,19 @@
   backface-visibility: hidden;
   transform: skew(0deg,3deg);
 }
+
+.wrapper-skewed {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  transform: skew(0deg,-3deg);
+}
+
 .button-width {
   width: 120px;
+}
+
+@media(max-width: 768px) {
+  .wrapper-skewed {
+    margin-left: 20px;
+  }
 }
