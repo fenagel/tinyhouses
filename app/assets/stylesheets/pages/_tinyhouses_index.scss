@@ -16,19 +16,35 @@
   top: 0;
 }
 
+.mobile-cards {
+  display: none;
+}
+
 g { // picks the marker on the map.
   fill: #b14339;
 }
 
 @media(max-width: 420px) {
+
+  .index-flex {
+    display: block;
+  }
+
   .index-cards {
     display: none;
   }
 
   #map {
-    height: 100vh;
+    height: 80vh;
     width:100vw;
-    position: sticky;
-    top: 0;
+    position:relative;
+  }
+
+  .mobile-cards {
+    display: grid;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
   }
 }
