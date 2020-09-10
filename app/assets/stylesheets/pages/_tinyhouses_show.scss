@@ -34,6 +34,10 @@
   background-size: cover;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .show-right-part, .show-left-part {
   margin-top: 20px;
 }
@@ -70,16 +74,18 @@
 .amenities {
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 30px;
   padding-top: 10px;
+  justify-content: center;
 }
 
-.bordertop {
+hr {
   border-top: 1px solid $brand;
 }
 
 .amenities-grid {
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(3, 1fr);
 grid-template-rows: 1fr;
 grid-column-gap: 20px;
 grid-row-gap: 0px;
@@ -96,3 +102,26 @@ text-align: left;
   line-height: 26px;
   padding-top: 10px;
 }
+
+@media(max-width: 420px) {
+  .photo-grid {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+    margin: 0 auto;
+
+    & img {
+      border-radius: 30px !important;
+    }
+  }
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .show-form {
+    width: 100%;
+  }
+}
+
+
+
