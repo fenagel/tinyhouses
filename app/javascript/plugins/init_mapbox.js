@@ -2,9 +2,6 @@
 import "mapbox-gl/dist/mapbox-gl"
 import mapboxgl from 'mapbox-gl';
 
-// picks the div where the map will be displayed
-const mapElement = document.getElementById('map');
-
 // Zooms the map based on the markers
 const fitMapToMarkers = (map, markers) => {
 const bounds = new mapboxgl.LngLatBounds();
@@ -13,6 +10,9 @@ const bounds = new mapboxgl.LngLatBounds();
 };
 
 const initMapbox = () => {
+
+  // picks the div where the map will be displayed
+  const mapElement = document.getElementById('map');
 
   // Builds the map (only if there's a div#map to inject into).
   if (mapElement) {
