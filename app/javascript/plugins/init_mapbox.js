@@ -2,17 +2,17 @@
 import "mapbox-gl/dist/mapbox-gl"
 import mapboxgl from 'mapbox-gl';
 
-// picks the div where the map will be displayed
-const mapElement = document.getElementById('map');
-
-// Zooms the map based on the markers
-const fitMapToMarkers = (map, markers) => {
-const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ])); // For each marker, extend the zoom
-  map.fitBounds(bounds, { padding: 70, maxZoom: 25, duration: 0 });     // and add padding. Duration gives a zoom-in effect.
-};
-
 const initMapbox = () => {
+
+  // picks the div where the map will be displayed
+  const mapElement = document.getElementById('map');
+
+  // Zooms the map based on the markers
+  const fitMapToMarkers = (map, markers) => {
+  const bounds = new mapboxgl.LngLatBounds();
+    markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ])); // For each marker, extend the zoom
+    map.fitBounds(bounds, { padding: 70, maxZoom: 25, duration: 0 });     // and add padding. Duration gives a zoom-in effect.
+  };
 
   // Builds the map (only if there's a div#map to inject into).
   if (mapElement) {
