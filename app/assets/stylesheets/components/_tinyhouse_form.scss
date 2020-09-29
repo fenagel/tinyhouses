@@ -29,5 +29,17 @@
 }
 
 .primary-button {
-  color: white;
+  opacity: 0.7;
+  height: 40px;
+  display: inline-block;
+  color: $brand;
+  border: 1px solid $brand;
+  border-radius: 30px;
+  padding: 2px 15px;
+  background-color: white;
+
+  &:hover {
+    color: $brand;
+    opacity: 1;
+  }
 }
