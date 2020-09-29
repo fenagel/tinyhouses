@@ -1,5 +1,5 @@
 class TinyhousesController < ApplicationController
-  before_action :find_tinyhouse, only: [:show, :destroy]
+  before_action :find_tinyhouse, only: [:show, :edit, :update, :destroy]
 
   def show
     @amenities = Tinyhouse::AMENITIES
@@ -31,6 +31,16 @@ class TinyhousesController < ApplicationController
     @tinyhouse = Tinyhouse.new
   end
 
+  def edit
+  end
+
+  def update
+    @tinyhouse.update(tinyhouse_params)
+    redirect_to tinyhouse_path(@tinyhouse)
+  end
+  
+  
+
   def destroy
     @tinyhouse.destroy
 
@@ -42,4 +52,9 @@ class TinyhousesController < ApplicationController
   def find_tinyhouse
     @tinyhouse = Tinyhouse.with_attached_photos.includes(:reviews).find(params[:id])
   end
+
+  def tinyhouse_params
+    params.require(:tinyhouse).permit(:title, :location, :description, :amenities, photos: [])
+  end
+  
 end
