@@ -3,11 +3,32 @@
   </div>
   <div class="form-field">
     <%= simple_form_for @tinyhouse do |f| %>
-    <%= f.input :title, label: 'Title for your listing', error: 'Titles are mandatory, please specify one' %>
-    <%= f.input :location, label: 'Address (in the following format: street name, city)' %>
+    <div class="row">
+      <div class="col-xs-6 mr-5">
+        <%= f.input :title, label: 'Title for your listing', error: 'Titles are mandatory, please specify one' %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :location, label: 'Address (in the following format: street name, city)' %>
+      </div>
+    </div>
     <%= f.input :description, as: :text %>
-    <%= f.input :amenities, collection: Tinyhouse::AMENITIES, as: :check_boxes %>
+
+
+    <fieldset class="form-group">
+      <legend class="col-form-label pt-0">Amenities</legend>
+      <input type="hidden" name="tinyhouse[amenities][]" value="">
+      <div class="amenities">
+        <% Tinyhouse::AMENITIES.each do |amenity| %>
+        <input class="hidden" type="checkbox" value="<%= amenity.downcase %>" name="tinyhouse[amenities][]" id="tinyhouse_amenities_<%= amenity.downcase %>">
+        <label class="amenity" for="tinyhouse_amenities_<%= amenity.downcase %>"><%= amenity %></label>
+        <% end %>
+      </div>
+    </fieldset>
+
+
     <%= f.button :button, "Create Your Listing", class: "primary-button" %>
     <% end %>
   </div>
 </div>
+
+<%#= f.input :amenities, collection: Tinyhouse::AMENITIES, as: :check_boxes %>
