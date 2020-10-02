@@ -37,10 +37,9 @@ document.addEventListener("turbolinks:load", () => {
   // initSelect2();
   initMapbox();
   toggleDateInputs();
-  const amenity = document.querySelector(".amenity");
-  amenity.addEventListener("click", (event) => {
-    console.log(event);
-    console.log(event.currentTarget);
-    event.currentTarget.classList.toggle("active");
+  jQuery(function () {
+    $(".amenity").on("click", function () {
+      $(this).toggleClass("active");
+    });
   });
 });

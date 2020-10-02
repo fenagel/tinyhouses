@@ -1,34 +1,37 @@
-<div class="container">
-  <div class="form-img" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= cl_image_path("http://res.cloudinary.com/fenagel/image/upload/v1598452178/bbv3ulfj1pjz9rzv4zd0.png", crop: 'fill') %>)">
-  </div>
-  <div class="form-field">
-    <%= simple_form_for @tinyhouse do |f| %>
-    <div class="row">
-      <div class="col-xs-6 mr-5">
+<div class="container form-container">
+  <div class="row justify-content-md-center">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 mb-5">
+      <div class="form-tinyhouse">
+        <h1>Host Your Tinyhouse</h1>
+        <%= simple_form_for @tinyhouse do |f| %>
+
         <%= f.input :title, label: 'Title for your listing', error: 'Titles are mandatory, please specify one' %>
-      </div>
-      <div class="col-xs-6">
-        <%= f.input :location, label: 'Address (in the following format: street name, city)' %>
-      </div>
-    </div>
-    <%= f.input :description, as: :text %>
 
 
-    <fieldset class="form-group">
-      <legend class="col-form-label pt-0">Amenities</legend>
-      <input type="hidden" name="tinyhouse[amenities][]" value="">
-      <div class="amenities">
-        <% Tinyhouse::AMENITIES.each do |amenity| %>
-        <input class="hidden" type="checkbox" value="<%= amenity.downcase %>" name="tinyhouse[amenities][]" id="tinyhouse_amenities_<%= amenity.downcase %>">
-        <label class="amenity" for="tinyhouse_amenities_<%= amenity.downcase %>"><%= amenity %></label>
+        <%= f.input :location, label: 'Address (street, city)' %>
+
+
+        <%= f.input :description, as: :text %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+        <fieldset class="form-group">
+          <legend class="col-form-label pt-0">Amenities</legend>
+          <input type="hidden" name="tinyhouse[amenities][]" value="">
+          <div class="amenities-form">
+            <% Tinyhouse::AMENITIES.each do |amenity| %>
+            <input class="hidden" type="checkbox" value="<%= amenity.downcase %>" name="tinyhouse[amenities][]" id="tinyhouse_amenities_<%= amenity.downcase %>">
+            <label class="amenity" for="tinyhouse_amenities_<%= amenity.downcase %>"><%= amenity %></label>
+            <% end %>
+          </div>
+        </fieldset>
+
+
+        <%= f.button :button, "Create Your Listing", class: "primary-button" %>
         <% end %>
       </div>
-    </fieldset>
-
-
-    <%= f.button :button, "Create Your Listing", class: "primary-button" %>
-    <% end %>
+    </div>
   </div>
 </div>
+
 
 <%#= f.input :amenities, collection: Tinyhouse::AMENITIES, as: :check_boxes %>

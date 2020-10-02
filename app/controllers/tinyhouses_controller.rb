@@ -31,6 +31,15 @@ class TinyhousesController < ApplicationController
     @tinyhouse = Tinyhouse.new
   end
 
+  def create
+    @tinyhouse = Tinyhouse.new(tinyhouse_params)
+    if @tinyhouse.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
+  end
+
   def edit
   end
 
@@ -54,7 +63,7 @@ class TinyhousesController < ApplicationController
   end
 
   def tinyhouse_params
-    params.require(:tinyhouse).permit(:title, :location, :description, :amenities, photos: [])
+    params.require(:tinyhouse).permit(:title, :location, :description, amenities: [], photos: [])
   end
   
 end

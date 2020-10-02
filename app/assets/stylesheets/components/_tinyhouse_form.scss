@@ -1,18 +1,42 @@
 .form-container {
-  width: 1200px;
-  margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://res.cloudinary.com/fenagel/image/upload/v1598452178/bbv3ulfj1pjz9rzv4zd0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3px;
 }
 
-.amenities_form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  text-align: left;
+// .amenities_form {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: 1fr;
+//   grid-column-gap: 0px;
+//   grid-row-gap: 0px;
+//   text-align: left;
+// }
+
+.form-tinyhouse {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
-.amenities {
+.amenities-form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -25,10 +49,11 @@
 
 .amenity {
   background: #b7b7b7;
-  padding: 20px;
+  font-size: 12px;
+  padding: 5px;
   border-radius: 5px;
   opacity: 0.4;
-  flex: 0 0 30%;
+  flex: 1 20%;
   text-align: center;
   &:hover {
     opacity: 1;
@@ -41,23 +66,38 @@
   }
 }
 
+#tinyhouse_title {
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+}
+
+#tinyhouse_location {
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+}
+
+#tinyhouse_description {
+  border-radius: 5px;
+  width: 100%;
+}
+
 .form-img {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 3px;
-  background-attachment: fixed;
-  background-position: center;
 }
-.form-field {
-  color: white;
-  margin-top: 70px;
-  margin-left: 80px;
-  padding: 40px 0;
-  width: 50%;
-  position: absolute;
-  top: 0;
-}
+// .form-field {
+//   color: white;
+//   margin-top: 70px;
+//   margin-left: 80px;
+//   padding: 40px 0;
+//   width: 50%;
+//   position: absolute;
+//   top: 0;
+// }
 
 .primary-button {
   opacity: 0.7;
@@ -69,7 +109,9 @@
   padding: 2px 15px;
   background-color: white;
   position: relative !important;
-  margin-top: 30px;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
 
   &:hover {
     color: $brand;
