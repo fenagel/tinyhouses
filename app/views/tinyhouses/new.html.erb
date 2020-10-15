@@ -7,11 +7,12 @@
 
         <%= f.input :title, label: 'Title for your listing', error: 'Titles are mandatory, please specify one' %>
 
-
         <%= f.input :location, label: 'Address (street, city)' %>
 
-
         <%= f.input :description, as: :text %>
+
+        <%= f.input :price_per_day, as: :integer, label: 'Price per day in EUR' %>
+
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
         <fieldset class="form-group">

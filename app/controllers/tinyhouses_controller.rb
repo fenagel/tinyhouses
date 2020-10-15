@@ -47,8 +47,8 @@ class TinyhousesController < ApplicationController
     @tinyhouse.update(tinyhouse_params)
     redirect_to tinyhouse_path(@tinyhouse)
   end
-  
-  
+
+
 
   def destroy
     @tinyhouse.destroy
@@ -63,7 +63,7 @@ class TinyhousesController < ApplicationController
   end
 
   def tinyhouse_params
-    params.require(:tinyhouse).permit(:title, :location, :description, amenities: [], photos: [])
+    params.require(:tinyhouse).permit(:title, :location, :price_per_day, :description, amenities: [], photos: [])
   end
-  
+
 end

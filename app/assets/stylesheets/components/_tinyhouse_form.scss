@@ -29,7 +29,7 @@
     margin-top: 0px;
   }
   .btn {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     font-weight: bold;
     text-align: center;
@@ -40,6 +40,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  column-gap: 5%;
   margin: 20px 0;
 }
 
@@ -83,6 +84,11 @@
   width: 100%;
 }
 
+#tinyhouse_price_per_day {
+  border-radius: 5px;
+  width: 50%;
+}
+
 .form-img {
   height: 100vh;
   background-size: cover;
@@ -101,17 +107,16 @@
 
 .primary-button {
   opacity: 0.7;
-  height: 40px;
-  display: inline-block;
+  height: 50px;
   color: $brand;
   border: 1px solid $brand;
   border-radius: 30px;
   padding: 2px 15px;
   background-color: white;
   position: relative !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  right: 0 !important;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
 
   &:hover {
     color: $brand;
