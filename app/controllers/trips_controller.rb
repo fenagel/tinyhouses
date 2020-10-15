@@ -1,4 +1,9 @@
 class TripsController < ApplicationController
+  def show
+    @user = current_user
+    @trips = @user.trips
+  end
+
   def create
     @tinyhouse = Tinyhouse.find(params[:tinyhouse_id])
     @trip = Trip.new(trip_params)
