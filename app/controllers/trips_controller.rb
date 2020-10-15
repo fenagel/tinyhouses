@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  def show
+  def index
     @user = current_user
     @trips = @user.trips
   end
