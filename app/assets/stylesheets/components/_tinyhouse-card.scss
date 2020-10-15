@@ -25,7 +25,7 @@
   overflow: hidden;
 }
 
-.slide {
+.thc-slide {
   width: 200px;
   margin-left: 10px;
 }
@@ -57,7 +57,11 @@
 
 
 
-
+@media(max-width: 420px) {
+  .index-card {
+    width: 320px;
+  }
+}
 
 
 

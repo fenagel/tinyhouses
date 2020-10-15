@@ -1,0 +1,52 @@
+.show-form {
+  border: 1px solid $brand;
+  border-radius: 10px;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.widget-content {
+  width: 100%;
+  padding: 20px;
+  .dates {
+    margin-bottom: 10px;
+  }
+}
+
+.costs {
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2000ms ease-in-out;
+}
+
+.costs.is-visible {
+    max-height: 999em;
+}
+
+#new_trip {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+#trip_check_in, #trip_check_out {
+  width: 90% !important;
+}
+.trip_check_in, .trip_check_out {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form-button {
+  opacity: 0.7;
+  color: $brand;
+  border: 1px solid $brand;
+  border-radius: 30px;
+  padding: 2px 15px;
+  background-color: white;
+
+  &:hover {
+    opacity: 1;
+  }
+}

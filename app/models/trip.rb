@@ -2,9 +2,12 @@ class Trip < ApplicationRecord
   belongs_to :user
   belongs_to :tinyhouse
 
-  validates :check_in, :check_out, :total_price, presence: true
-  validates :check_in, :check_out, availability: true
+  validates :check_in, :check_out, presence: true, availability: true
   validate :check_out_after_check_in
+
+  def booked_date_range
+    { from: :check_in, to: :check_out }
+  end
 
   private
 
