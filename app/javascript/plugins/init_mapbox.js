@@ -1,4 +1,5 @@
 // init_mapbox.js
+
 import "mapbox-gl/dist/mapbox-gl"
 import mapboxgl from 'mapbox-gl';
 
@@ -18,21 +19,21 @@ const initMapbox = () => {
   if (mapElement) {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/harveyswick/ckeb63qqf0aqi19obtw1ef9w7' // Add the map's stylesheet here
+      container: "map",
+      style: "mapbox://styles/harveyswick/ckeb63qqf0aqi19obtw1ef9w7", // Add the map's stylesheet here
     });
 
-  // Adds the infoWindow popup
-  const markers = JSON.parse(mapElement.dataset.markers);
-  markers.forEach((marker) => {
-    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow.content);
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .setPopup(popup)
-      .addTo(map);
+    // Adds the infoWindow popup
+    const markers = JSON.parse(mapElement.dataset.markers);
+    markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow.content);
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .setPopup(popup)
+        .addTo(map);
     });
 
-  fitMapToMarkers(map, markers);
+    fitMapToMarkers(map, markers);
   }
 };
 

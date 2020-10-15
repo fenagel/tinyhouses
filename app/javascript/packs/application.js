@@ -3,15 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+require("@rails/ujs").start();
+require("turbolinks").start();
+require("@rails/activestorage").start();
+require("channels");
 
-
-import { toggleDateInputs } from '../components/trip';
-
-
+import { toggleDateInputs } from "../components/trip";
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -20,7 +17,6 @@ import { toggleDateInputs } from '../components/trip';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
@@ -28,18 +24,22 @@ import { toggleDateInputs } from '../components/trip';
 
 // External imports
 import "bootstrap";
-import 'flatpickr/dist/flatpickr.min.css'
+import "flatpickr/dist/flatpickr.min.css";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initMapbox } from '../plugins/init_mapbox';
-
+import { initMapbox } from "../plugins/init_mapbox";
 
 // call your functions here so that they are called in every relevant page of the app.
 // && work with AJAX
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
   toggleDateInputs();
+  jQuery(function () {
+    $(".amenity").on("click", function () {
+      $(this).toggleClass("active");
+    });
+  });
 });
