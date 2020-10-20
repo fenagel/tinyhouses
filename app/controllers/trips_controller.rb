@@ -2,6 +2,15 @@ class TripsController < ApplicationController
   def index
     @user = current_user
     @trips = @user.trips
+    @past_trips = []
+    @future_trips = []
+    @trips.each do |trip|
+      if trip.check_out < Date.today
+        @past_trips << trip
+      else
+        @future_trips << trip
+      end
+    end
   end
 
   def create
