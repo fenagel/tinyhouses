@@ -90,3 +90,27 @@
     text-align: center;
   }
 }
+
+
+// ============ //
+#tab1, #tab2 {
+  float: left;
+  padding: 5px 10px 5px 10px;
+  background: #B00098;
+  color: #FFFFFF;
+  margin: 0px 5px 0px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#tab1:hover, #tab2:hover {
+  background: #E800C9;
+}
+
+#tab1content {
+ display: flex;
+}
+
+#tab2content {
+ display: none;
+}
