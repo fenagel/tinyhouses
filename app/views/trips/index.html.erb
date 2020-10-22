@@ -4,15 +4,17 @@
     <h3 style="margin-left:20px; margin-top: 30px;">Trips</h3>
   </div>
 
-  <div id="tab1" onClick="JavaScript:selectTab(1);">Upcoming</div>
-  <div id="tab2" onClick="JavaScript:selectTab(2);">Past</div>
+  <div class="tabs">
+    <div id="tab1" onClick="JavaScript:selectTab(1);">Upcoming</div>
+    <div id="tab2" onClick="JavaScript:selectTab(2);">Past</div>
+  </div>
 
-  <div class="underline-dashboard"></div>
+  <div class="underline-dashboard-trips-top"></div>
     <div id="tab1content">
       <%= render partial: '/shared/trip-card-dashboard', locals: { trips: @trips } %>
     </div>
     <div id="tab2content">
-      <%= render partial: '/shared/trip-card-dashboard', locals: { trips: @trips } %>
+      <%= render partial: '/shared/past-trip-card-dashboard', locals: { trips: @trips } %>
     </div>
   <div class="underline-dashboard"></div>
 </div>
