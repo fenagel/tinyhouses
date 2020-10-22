@@ -3,5 +3,4 @@ class DashboardsController < ApplicationController
     @user = current_user
     @tinyhouses = @user.tinyhouses
   end
-  
 end
