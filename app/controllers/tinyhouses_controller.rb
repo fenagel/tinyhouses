@@ -33,7 +33,8 @@ class TinyhousesController < ApplicationController
 
   def create
     @tinyhouse = Tinyhouse.new(tinyhouse_params)
-    if @tinyhouse.save
+    @tinyhouse.user = current_user
+    if @tinyhouse.save!
       redirect_to dashboard_path
     else
       render :new
@@ -63,7 +64,7 @@ class TinyhousesController < ApplicationController
   end
 
   def tinyhouse_params
-    params.require(:tinyhouse).permit(:title, :location, :description, amenities: [], photos: [])
+    params.require(:tinyhouse).permit(:title, :location, :price_per_day, :description, amenities: [], photos: [])
   end
   
 end
