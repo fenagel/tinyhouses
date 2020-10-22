@@ -1,5 +1,5 @@
 <%= render 'shared/hero' %>
-<h3 class="mt-5 text-center">Featured Tinyhouses</h3>
+<h1 class="mt-5 text-center">Featured Tinyhouses</h1>
 <%= render 'shared/home-cards' %>
 <div class="content-skewed">
   <div class="block-skewed">
@@ -11,13 +11,40 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <h3 class="mt-5 mb-5 text-center">The Tinyhouse movement</h3>
-  <p class="mt-3 text-left">With housing loans becoming harder to obtain and financial burdens on homeowners growing larger, many are turning to tiny houses to downsize their lives and budgets.</p>
-  <p class="mt-3 text-left">But while these compact castles are frequently fewer than 300 square feet, that doesn't mean that they're all about sacrificing luxury. You can still live large and enjoy life to the fullest while reducing your home's overall footprint.</p>
-  <p class="mt-3 mb-5 text-left"> Check out our amazing Tinyhouses for some awesome examples of what can be accomplished with hard work, a small budget, and a tiny space...</p>
-  <div class="d-flex justify-content-center mb-5">
-    <%= render 'shared/search_bar_home' %>
+<div class="container tinyhouse-movement-container">
+  <div class="row">
+    <div class="col-md-6 tinyhouse-movement">
+      <%= cl_image_tag("http://res.cloudinary.com/fenagel/image/upload/v1603363561/wpwwqowbjrggyry5zpgi.jpg", crop: :fit) %>
+    </div>
+    <div class="col-md-6">
+      <h3 class="mb-5 mt-2 text-center">The Tinyhouse Movement</h3>
+      <p class="mt-3 text-left">With housing loans becoming harder to obtain and financial burdens on homeowners growing larger, many are turning to tiny houses to downsize their lives and budgets.</p>
+      <p class="mt-3 text-left">But while these compact castles are frequently fewer than 300 square feet, that doesn't mean that they're all about sacrificing luxury. You can still live large and enjoy life to the fullest while reducing your home's overall footprint.</p>
+      <p class="mt-3 mb-5 text-left"> Check out our amazing Tinyhouses for some awesome examples of what can be accomplished with hard work, a small budget, and a tiny space...</p>
+    </div>
+  </div>
+</div>
+<div class="blog-container">
+  <h1 class="text-center mb-5">From Our Blog</h1>
+  <div class="blog-cards row justify-content-around">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+      <div class="article article-1">
+        <h4>Tiny Houses in Spain</h4>
+      </div>
+      <button class="form-button button-width button-blog">Read this Article</button>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+      <div class="article article-2">
+        <h4>Fitting more in Less Space: 5 Hacks for Your Tinyhouse</h4>
+      </div>
+      <button class="form-button button-width button-blog">Read this Article</button>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+      <div class="article article-3">
+        <h4>Minimalist Design guide for Tiny Houses</h4>
+      </div>
+      <button class="form-button button-width button-blog">Read this Article</button>
+    </div>
   </div>
 </div>
 <%= render 'shared/footer' %>
