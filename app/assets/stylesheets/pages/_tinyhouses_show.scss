@@ -8,7 +8,7 @@
   justify-content: center;
   height: 500px;
   border-radius: 20px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .photo-1 {
@@ -24,13 +24,17 @@
 
 .photo-4 {
   grid-area: photo-4;
- }
+}
 
 .photo-5 {
   grid-area: photo-5;
 }
 
-.photo-1, .photo-2, .photo-3, .photo-4, .photo-5 {
+.photo-1,
+.photo-2,
+.photo-3,
+.photo-4,
+.photo-5 {
   background-size: cover;
 }
 
@@ -38,8 +42,9 @@
   display: none;
 }
 
-.show-right-part, .show-left-part {
-  margin-top: 20px;
+.show-right-part,
+.show-left-part {
+  margin-top: 40px;
 }
 
 .overview-section {
@@ -49,7 +54,7 @@
 }
 .overview-section i {
   font-size: 16px;
-  margin-right:5px;
+  margin-right: 5px;
 }
 .overview-section h4 {
   font-weight: 600;
@@ -84,16 +89,16 @@ hr {
 }
 
 .amenities-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 1fr;
-grid-column-gap: 20px;
-grid-row-gap: 0px;
-text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  text-align: left;
 }
 
 .amenities img {
-  height:24px;
+  height: 24px;
   padding-right: 5px;
 }
 
@@ -103,7 +108,7 @@ text-align: left;
   padding-top: 10px;
 }
 
-@media(max-width: 420px) {
+@media (max-width: 420px) {
   .photo-grid {
     display: none;
   }
@@ -122,6 +127,3 @@ text-align: left;
     width: 100%;
   }
 }
-
-
-
