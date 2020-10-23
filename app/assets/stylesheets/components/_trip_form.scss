@@ -1,7 +1,7 @@
 .show-form {
   border: 1px solid $brand;
   border-radius: 10px;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -50,4 +50,8 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.flatpickr-mobile {
+  width: 90%;
 }
