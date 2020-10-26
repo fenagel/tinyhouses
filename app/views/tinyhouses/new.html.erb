@@ -13,6 +13,7 @@
 
         <%= f.input :description, as: :text %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :price_per_day %>
 
         <fieldset class="form-group">
           <legend class="col-form-label pt-0">Amenities</legend>
@@ -26,12 +27,9 @@
         </fieldset>
 
 
-        <%= f.button :button, "Create Your Listing", class: "primary-button" %>
+        <%= f.button :submit, "Create Your Listing", class: "primary-button" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
-<%#= f.input :amenities, collection: Tinyhouse::AMENITIES, as: :check_boxes %>

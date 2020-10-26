@@ -1,37 +1,113 @@
 // Specific CSS for your home-page
 .block-skewed {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 100%;
-  margin: 80px 0;
-  padding: 20px;
+  margin: 120px 0;
+  padding: 30px;
   position: relative;
-  color:white;
-  background: linear-gradient(
-    to right,
-    #91B6A9 0%,
-    #B6CEC6 100%
-  );
-  box-shadow: 0 2px 10px #777;
+  color: white;
+  background: linear-gradient(to right, #91b6a9 0%, #b6cec6 100%);
+  box-shadow: 0 1px 10px #777;
   backface-visibility: hidden;
-  transform: skew(0deg,3deg);
+  transform: skew(0deg, 2deg);
 }
 
 .wrapper-skewed {
   margin-bottom: 60px;
   margin-top: 40px;
-  transform: skew(0deg,-3deg);
+  transform: skew(0deg, -2deg);
 }
 
 .button-width {
   width: 120px;
 }
 
-@media(max-width: 768px) {
+.tinyhouse-movement-container {
+  margin-top: 180px;
+  margin-bottom: 100px;
+}
+
+.tinyhouse-movement {
+  img {
+    width: 100%;
+    border-radius: 3px;
+  }
+}
+
+.blog-container {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 88%;
+}
+
+.article {
+  background-position: bottom;
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  position: relative;
+  border-radius: 3px;
+
+  h4 {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 120%;
+    text-shadow: 1px 1px 6px #333;
+  }
+}
+
+.article-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://uploads-ssl.webflow.com/5cd1e68968db65ba07de7bfb/5f88bfbae11da97634d420cd_PANGEA%20tiny%20house.jpg");
+}
+
+.article-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://uploads-ssl.webflow.com/5cd1e68968db65ba07de7bfb/5f6bc86ac1dac4521c4be79e_AdobeStock_334602312.jpeg");
+}
+
+.article-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://uploads-ssl.webflow.com/5cd1e68968db65ba07de7bfb/5f68ee818d8299a70a0f9678_AdobeStock_260594192.jpeg");
+}
+
+.button-blog {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  width: 200px;
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
   .wrapper-skewed {
     margin-left: 20px;
+  }
+
+  .margin-bottom-mobile {
+    margin-bottom: 25px;
+  }
+
+  .tinyhouse-movement {
+    margin-bottom: 20px;
+  }
+
+  .article {
+    margin: 0 auto;
+    width: 60%;
   }
 }
