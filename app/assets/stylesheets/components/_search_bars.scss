@@ -1,9 +1,8 @@
 // _search_bars.scss
 .btn-map {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  top: 8%;
+  left: 80%;
 }
 
 .btn-home {
@@ -52,10 +51,14 @@
 }
 
 .search-bar {
-  position: absolute;
+  position: relative;
   top: 30px;
   left: 30px;
   z-index: 2;
+}
+
+.search-bar > form {
+  position: relative;
 }
 
 .search-bar-home {

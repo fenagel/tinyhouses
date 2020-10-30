@@ -4,24 +4,24 @@
   width: 420px;
   height: 150px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 20px;
   &:hover {
     transform: translate(3px, 3px); // moves div to the right
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
   }
-  &:active, {
+  &:active {
     transform: translate(2px, 2px);
     box-shadow: none;
-    border: 1px solid rgba(0,0,0,0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
   }
 }
 
 .carousel-custom-styles {
-  border-radius: 10px ;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -29,7 +29,6 @@
   width: 200px;
   margin-left: 10px;
 }
-
 
 .card-text {
   padding: 25px;
@@ -55,14 +54,8 @@
   margin-bottom: 5px;
 }
 
-
-
-@media(max-width: 420px) {
+@media (max-width: 420px) {
   .index-card {
     width: 320px;
   }
 }
-
-
-
-
