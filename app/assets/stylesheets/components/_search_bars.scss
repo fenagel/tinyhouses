@@ -9,7 +9,7 @@
 .btn-home {
   position: absolute;
   bottom: 5px;
-  right: 30px;
+  left: 65%;
 }
 
 .form-control {
@@ -56,6 +56,10 @@
   top: 30px;
   left: 30px;
   z-index: 2;
+}
+
+.search-bar-home {
+  position: relative;
 }
 
 @media (max-width: 420px) {
