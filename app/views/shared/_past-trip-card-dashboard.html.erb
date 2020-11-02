@@ -1,0 +1,27 @@
+<!-- _past-trip-card-dashboard.html.erb -->
+<% require 'date' %>
+<% @past_trips.each do |trip| %>
+
+    <div class="index-card-tcd tcd">
+      <div id="carouselExampleSlidesOnly" class="carousel slide-tcd" data-ride="carousel">
+        <div class="carousel-inner carousel-custom-styles-tcd">
+          <% trip.tinyhouse.photos.each_with_index do |photo, index|%>
+          <div class="carousel-item <%= "active" if index == 0 %>">
+            <%= cl_image_tag photo.key, crop: 'fit', class: "d-block w-100 test-tcd" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="card-text-tcd">
+        <% if  trip.check_out < Date.today %>
+          <h4>Your Past Trip to <%= trip.tinyhouse.title %></h4>
+          <% else %>
+            <h4>Your Trip to <%= trip.tinyhouse.title %></h4>
+        <% end %>
+        <div class="underline-tcd"></div>
+        <h6><%= trip.tinyhouse.location %></h6>
+        <p>From <%= trip.check_in.strftime("%B %d") %> until <%= trip.check_out.strftime("%B %d - %Y") %></p>
+        <p><%= trip.tinyhouse.price_per_day %>€ / Night</p>
+      </div>
+    </div>
+<% end %>
