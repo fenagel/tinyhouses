@@ -3,16 +3,16 @@
 //   top: 0;
 // }
 
-.navbar-lewagon {
+.navbar-space-between {
   justify-content: space-between;
   background: transparent;
   transition: 0.5s background-color ease; // TO DO: turn navbar white when scroll > hero
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-space-between .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-space-between .navbar-brand img {
   width: 40px;
 }
