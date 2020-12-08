@@ -29,6 +29,7 @@ require("flatpickr/dist/flatpickr.css");
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from "../plugins/init_mapbox";
 import { toggleDateInputs } from "../components/trip";
+import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 // call your functions here so that they are called in every relevant page of the app.
 // && work with AJAX
@@ -36,6 +37,7 @@ document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initUpdateNavbarOnScroll();
   toggleDateInputs();
   jQuery(function () {
     $(".amenity").on("click", function () {
