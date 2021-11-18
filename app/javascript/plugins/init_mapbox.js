@@ -27,6 +27,7 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow.content);
+      // new mapboxgl.Marker({ "color": "red"}) you can pass options here. Check docs for more
       new mapboxgl.Marker()
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
